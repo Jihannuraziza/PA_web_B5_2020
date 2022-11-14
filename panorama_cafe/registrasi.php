@@ -25,7 +25,26 @@
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="password" id="password" required>
             
-        <button type="submit" name="register" value="LOGIN">REGISTER</button>
+        <button type="submit" name="register" 
+        
+        style=" background-color: #04AA6D;
+                        color: white;
+                        padding: 14px 20px;
+                        margin: 8px 0;
+                        border: none;
+                        cursor: pointer;
+                        border-radius: 30px;
+                        width: 100%;"
+                        
+        
+                onmouseover = " this.style.backgroundColor = '#4CAF50';
+                                this.style.color = '#fff';
+                                this.style.borderRadius = '30px';"
+                onmouseout  = " this.style.backgroundColor = '#04AA6D';
+                                this.style.color = '#fff';
+                                this.style.borderRadius = '30px';"        
+
+        value="LOGIN">REGISTER</button>
         
         </div>
 
@@ -47,8 +66,11 @@
             $nama = $_POST['nama'];
             $username = $_POST['username'];
             $password = md5($_POST['password']);
-
+            
             mysqli_query($koneksi, "INSERT INTO `akun`(`nama`, `username`, `password`) VALUES ('$nama', '$username', '$password')");
+
+            mysqli_query($koneksi, "ALTER TABLE akun DROP COLUMN id");
+            mysqli_query($koneksi, "ALTER TABLE `akun` ADD `id` INT(11) NOT NULL AUTO_INCREMENT FIRST, ADD PRIMARY KEY (`id`)");
             header("Location: index.php");
         }
     ?>

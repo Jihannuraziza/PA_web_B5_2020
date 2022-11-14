@@ -1,5 +1,60 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+header{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/panorama_cafe.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;     
+}
+
+.wrapper{
+    width: 1170px;
+    margin: auto;
+    color: #fff;
+    padding-top: 30px;
+}
+
+.welcome-text{
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    margin: 12% 30%;
+    text-align: left;
+}
+
+.welcome-text h1, h2, h3{
+    text-align: center;
+    font-style: italic;
+    color: white;
+    /* text-transform: uppercase; */
+    font-style: 60px;
+}
+
+.welcome-text a{
+
+    border: 1px solid #fff;
+    border-radius: 30px;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 20px;
+    display: inline-block;
+    color:  white;
+    cursor: pointer;
+}
+
+.welcome-text a:hover{
+    background: white;
+    color: #333;
+    border-radius: 30px;
 }
 
 /* Full-width input fields */
@@ -12,20 +67,9 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
 }
 
-/* Set a style for all buttons */
-button {
-    background-color: #04AA6D;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
 
-button:hover {
-    opacity: 0.8;
-}
+/* Set a style for all buttons */
+
 
 /* Extra styles for the cancel button */
 .cancelbtn {

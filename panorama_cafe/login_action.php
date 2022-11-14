@@ -15,10 +15,10 @@
 
         if($jumlah > 0){
             $row = mysqli_fetch_assoc($hasil);
-            $_SESSION["id_user"] = $row["id_user"];
-            $_SESSION["username"] = $row["username"];
+            $_SESSION["id"] = $row["id"];
             $_SESSION["nama"] = $row["nama"];
-            $_SESSION["email"] = $row["email"];
+            $_SESSION["username"] = $row["username"];
+            $_SESSION["password"] = $row["password"];
 
             header("Location:beranda.php");
         }else{
@@ -29,10 +29,10 @@
 
             if($jumlah > 0){
                 $row = mysqli_fetch_assoc($hasil);
-                $_SESSION["id_user"] = $row["id_user"];
-                $_SESSION["username"] = $row["username"];
+                $_SESSION["id"] = $row["id"];
                 $_SESSION["nama"] = $row["nama"];
-                $_SESSION["email"] = $row["email"];
+                $_SESSION["username"] = $row["username"];
+                $_SESSION["password"] = $row["password"];
     
                 header("Location:admin.php");
             }

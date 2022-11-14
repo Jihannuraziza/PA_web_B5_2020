@@ -1,63 +1,3 @@
-<?php
-    // include "config.php";
-    // session_start();
-    // if(isset($_POST["submit"])){
-
-    //     $username = $_POST["username"];
-    //     $p = md5($_POST["password"]);
-
-    //     $query = mysqli_query($koneksi, "SELECT * FROM akun WHERE username = '$username' AND password = '$p'");
-    //     $result = mysqli_num_rows($query);
-
-    //     if($result > 0){
-    //         $row = mysqli_fetch_assoc($query);
-    //         $_SESSION['id'] = $row['id'];
-    //         $_SESSION['nama'] = $row["nama"];
-    //         $_SESSION["username"] = $row["username"];
-    //         $_SESSION["password"] = $row["password"];
-
-    //         header("Location:beranda.php");
-    //     }
-    //     else{
-    //         header("Location:index.php");
-    //     }
-        // $username = $result['username'];
-        // if(password_verify($password, $result['password'])){
-        //     $_SESSION['login'] = true;
-        //     $_SESSION['nama'] = $result['nama'];
-        //     $_SESSION['username'] = $result["username"];
-        //     echo "
-        //     <script>
-        //         alert('Selamat Datang $username');
-        //         document.location.href = 'beranda.php';
-        //     </script>            
-        //     ";
-        // }
-        // else{
-        //     $query = mysqli_query($koneksi, "SELECT * FROM akun_admin WHERE username = '$username'");
-        //     $result = mysqli_fetch_assoc($query);
-        //     $username = $result['username'];
-        //     if(password_verify($password, $result['password'])){
-        //         $_SESSION['login'] = true;
-        //         $_SESSION['nama'] = $result['nama'];
-        //         $_SESSION['username'] = $result["username"];
-        //         echo "
-        //         <script>
-        //             alert('Selamat Datang $username');
-        //             document.location.href = 'beranda.php';
-        //         </script>            
-        //         ";
-        //     }
-        // }
-//     }
-// ?>
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,40 +8,89 @@
     <title>Landing Page</title>
 </head>
 <body>
-    <center>
-        <h2>Selamat Datang Di PANORAMA CAFE</h2>
-        <h3>Login Dahulu Sebelum Lanjut</h3>
-        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-    </center>    
-    
+    <header>
 
-    <div id="id01" class="modal">
-    
-    <form class="modal-content animate" action="login_action.php" method="post">
-        <div class="imgcontainer">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-        <img src="avatar.png" alt="Avatar" class="avatar">
+        <div class="wrapper">
+            <center>
+                <h1>PANORAMA CAFE</h1>
+            </center>
         </div>
 
-        <div class="container">
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="username" id="username" required>
-
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="password" id="password" required>
-            
-        <button type="submit" name="submit" value="LOGIN">Login</button>
-        <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label>
+        <div class="welcome-text">
+            <center>
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat veniam optio magnam fuga adipisci? Provident minus voluptatem, suscipit deleniti delectus praesentium accusantium necessitatibus eius debitis in eos voluptas quisquam aliquam.</h3>
+                <button style=" background-color: transparent;
+                                border: 1px solid #fff;
+                                border-radius: 30px;
+                                padding: 10px 25px;
+                                text-decoration: none;
+                                font-size: 14px;
+                                margin-top: 30px;
+                                display: inline-block;
+                                cursor: pointer;
+                                color: white;
+                                " 
+                            onmouseover = " this.style.backgroundColor = '#4CAF50';
+                                            this.style.color = '#fff';
+                                            this.style.borderRadius = '30px';"
+                            onmouseout = "this.style.backgroundColor = 'transparent';
+                                            this.style.color = '#fff';
+                                            this.style.borderRadius = '30px';"
+                                onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
+                    Bergabung untuk mengakses lebih lengkap
+                </button>
+            </center>    
         </div>
 
-        <div class="container" style="background-color:#f1f1f1">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <span class="psw"><a href="registrasi.php">Register?</a></span>
+        
+
+        <div id="id01" class="modal">
+        
+        <form class="modal-content animate" action="login_action.php" method="post">
+            <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="avatar.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" id="username" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" id="password" required>
+                
+            <button type="submit" name="submit" value="LOGIN"
+                style=" background-color: #04AA6D;
+                        color: white;
+                        padding: 14px 20px;
+                        margin: 8px 0;
+                        border: none;
+                        cursor: pointer;
+                        border-radius: 30px;
+                        width: 100%;"
+                        
+        
+                onmouseover = " this.style.backgroundColor = '#4CAF50';
+                                this.style.color = '#fff';
+                                this.style.borderRadius = '30px';"
+                onmouseout  = " this.style.backgroundColor = '#04AA6D';
+                                this.style.color = '#fff';
+                                this.style.borderRadius = '30px';"        >
+                Login
+            </button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw"><a href="registrasi.php">Register?</a></span>
+            </div>
+        </form>
         </div>
-    </form>
-    </div>
+    </header>
+
 
 <script>
 // Get the modal
