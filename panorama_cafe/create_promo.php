@@ -37,7 +37,7 @@
                     <h2><span>Promo Form</span></h2>
                     <form action="insert.php" method="post" enctype="multipart/form-data">
                         <input type="text" id="promo" name="promo" placeholder="Promo Name..."><br>
-                        <input type="text" id="coffee" name="coffee" placeholder="Coffee Name..."><br>
+                        <input type="text" id="coffee" name="coffee" placeholder="Drink Name..."><br>
                         <input type="text" id="price" name="price" placeholder="Price..."><br>
                         <!-- <input type="text" id="phone" name="phone" placeholder="08XX-XXXX-XXXX..."  pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}"> -->
                         <!-- <select id="country" name="country">

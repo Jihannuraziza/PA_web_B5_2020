@@ -13,6 +13,8 @@
         move_uploaded_file($img_loc, "uploadImage/".$img_name);
 
         mysqli_query($koneksi, "INSERT INTO `promo`(`promo`, `coffee`, `harga`, `gambar`) VALUES ('$PROMO','$COFFEE','$PRICE','$img_des')");
+        mysqli_query($koneksi, "ALTER TABLE promo DROP COLUMN id");
+        mysqli_query($koneksi, "ALTER TABLE `promo` ADD `id` INT(11) NOT NULL AUTO_INCREMENT FIRST, ADD PRIMARY KEY (`id`)");
         header("Location:beranda.php");
     }
 ?>
